@@ -217,7 +217,7 @@ spec:
       - uses: kustomize-set-image
         as: update-image
         config:
-          path: ./src/app/env
+          path: ./src/app/env/dev
           images:
           - image: ${{ vars.imageRepo }}
             tag: ${{ imageFrom(vars.imageRepo).Tag }}
