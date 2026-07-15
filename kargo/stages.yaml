@@ -208,7 +208,7 @@ spec:
           checkout:
           - branch: main
             path: ./src
-          - branch: env/dev
+          - branch: env/dev-debug
             create: true
             path: ./out
       - uses: git-clear
