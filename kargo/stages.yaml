@@ -172,11 +172,10 @@ spec:
         config:
           path: ./out
           targetBranch: env/prod
-      - uses: git-push
+      - uses: git-open-pr
         config:
-          path: ./out
           targetBranch: main
-          pullRequest: {}
+          sourceBranch: ${{ outputs.git-push.branch }}
 #      - uses: argocd-update
 #        config:
 #          apps:
