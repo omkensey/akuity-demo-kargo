@@ -50,13 +50,13 @@ spec:
         config:
           path: ./out
           targetBranch: env/dev
-      - uses: argocd-update
-        config:
-          apps:
-          - name: guestbook-simple-dev
-            sources:
-            - repoURL: ${{ vars.gitRepo }}
-              desiredRevision: ${{ outputs.commit.commit }}
+#      - uses: argocd-update
+#        config:
+#          apps:
+#          - name: guestbook-simple-dev
+#            sources:
+#            - repoURL: ${{ vars.gitRepo }}
+#              desiredRevision: ${{ outputs.commit.commit }}
 ---
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
@@ -111,13 +111,13 @@ spec:
         config:
           path: ./out
           targetBranch: env/staging
-      - uses: argocd-update
-        config:
-          apps:
-          - name: guestbook-simple-staging
-            sources:
-            - repoURL: ${{ vars.gitRepo }}
-              desiredRevision: ${{ outputs.commit.commit }}
+#      - uses: argocd-update
+#        config:
+#          apps:
+#          - name: guestbook-simple-staging
+#            sources:
+#            - repoURL: ${{ vars.gitRepo }}
+#              desiredRevision: ${{ outputs.commit.commit }}
 ---
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
@@ -172,10 +172,10 @@ spec:
         config:
           path: ./out
           targetBranch: env/prod
-      - uses: argocd-update
-        config:
-          apps:
-          - name: guestbook-simple-prod
-            sources:
-            - repoURL: ${{ vars.gitRepo }}
-              desiredRevision: ${{ outputs.commit.commit }}
+#      - uses: argocd-update
+#        config:
+#          apps:
+#          - name: guestbook-simple-prod
+#            sources:
+#            - repoURL: ${{ vars.gitRepo }}
+#              desiredRevision: ${{ outputs.commit.commit }}
