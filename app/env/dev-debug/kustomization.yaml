@@ -11,5 +11,3 @@ images:
   newName: ghcr.io/omkensey/guestbook
   newTag: v0.0.1
 - name: fedora
-  newName: fedora
-  newTag: latest
