@@ -169,13 +169,14 @@ spec:
           path: ./out
           message: ${{ outputs['update-image'].commitMessage }}
       - uses: git-push
+        as: push
         config:
           path: ./out
           targetBranch: env/prod
       - uses: git-open-pr
         config:
           targetBranch: main
-          sourceBranch: ${{ outputs.git-push.branch }}
+          sourceBranch: ${{ outputs.push.branch }}
 #      - uses: argocd-update
 #        config:
 #          apps:
