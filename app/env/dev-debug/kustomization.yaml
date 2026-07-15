@@ -2,7 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ../../base
+- ../../base/guestbook-debug-deploy.yaml
+- ../../base/guestbook-ns.yaml
+- ../../base/guestbook-svc.yaml
 
 namespace: guestbook-simple-dev
 
@@ -10,4 +12,3 @@ images:
 - name: ghcr.io/omkensey/guestbook
   newName: ghcr.io/omkensey/guestbook
   newTag: v0.0.1
-- name: fedora

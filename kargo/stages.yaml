@@ -221,8 +221,6 @@ spec:
           images:
           - image: ${{ vars.imageRepo }}
             tag: ${{ imageFrom(vars.imageRepo).Tag }}
-          - image: fedora
-            tag: latest
       - uses: kustomize-build
         config:
           path: ./src/app/env/dev-debug
