@@ -175,6 +175,7 @@ spec:
           targetBranch: env/prod
       - uses: git-open-pr
         config:
+          repoURL: ${{ vars.gitRepo }}
           targetBranch: main
           sourceBranch: ${{ outputs.push.branch }}
 #      - uses: argocd-update
