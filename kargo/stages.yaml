@@ -172,6 +172,11 @@ spec:
         config:
           path: ./out
           targetBranch: env/prod
+      - uses: git-push
+        config:
+          path: ./out
+          targetBranch: main
+          pullRequest: {}
 #      - uses: argocd-update
 #        config:
 #          apps:
