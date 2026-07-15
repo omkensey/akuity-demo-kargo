@@ -12,4 +12,4 @@ images:
   newTag: v0.0.1
 - name: fedora
   newName: fedora
-  newTag: v0.0.1
+  newTag: latest
