@@ -144,7 +144,7 @@ spec:
         config:
           repoURL: ${{ vars.gitRepo }}
           checkout:
-          - branch: main
+          - branch: env/staging
             path: ./src
           - branch: env/prod
             create: true
